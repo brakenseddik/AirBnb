@@ -1,7 +1,9 @@
+import 'package:airbnb/components/aventures.dart';
+import 'package:airbnb/components/cards.dart';
+import 'package:airbnb/components/header.dart';
+import 'package:airbnb/components/searchbar.dart';
 import 'package:airbnb/constants/constants.dart';
-import 'package:airbnb/widgets/cards.dart';
-import 'package:airbnb/widgets/header.dart';
-import 'package:airbnb/widgets/searchbar.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,8 +22,20 @@ class _ExploreState extends State<Explore> {
           searchBar(),
           Header(),
           Container(
-            height: 350,
+            height: 160,
             child: Cards(),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0),
+            child: Text(
+              'Expériences très bien notés',
+              style: GoogleFonts.signika(
+                  fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            height: 300,
+            child: Aventures(),
           )
         ],
       ),
