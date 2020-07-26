@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Air Bnb',
       theme: ThemeData.light().copyWith(
+          accentColor: Color(0xFFFF5A60),
           primaryColor: Color(0xFFFF5A60),
           bottomAppBarColor: Color(0xFFFF5A60)),
       home: HomePage(),

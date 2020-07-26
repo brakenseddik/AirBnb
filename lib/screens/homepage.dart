@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: pages[_currentindex],
       bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
           currentIndex: _currentindex,
           onTap: (index) {
             setState(() {

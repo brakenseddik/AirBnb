@@ -6,17 +6,17 @@ class Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 18),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           CardItem(
             title: 'Logements',
-            imgURL: 'assets/image.jpg',
+            imgURL: 'assets/zz.jpg',
           ),
           CardItem(
             title: 'Expériences',
-            imgURL: 'assets/mm.jpg',
+            imgURL: 'assets/hambourh.jpg',
           ),
           CardItem(
             title: 'Aventures',
@@ -36,8 +36,8 @@ class CardItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(top: 15, left: 7, right: 7, bottom: 15),
-        height: 110,
-        width: 120,
+        height: 130,
+        width: 130,
         child: Material(
           borderRadius: BorderRadius.all(Radius.circular(12)),
           elevation: 4.5,
@@ -50,8 +50,8 @@ class CardItem extends StatelessWidget {
                   child: Image.asset(
                     imgURL,
                     fit: BoxFit.cover,
-                    height: 85,
-                    width: 120,
+                    height: MediaQuery.of(context).size.height / 7.5,
+                    width: 130,
                   )),
               Text(
                 title,

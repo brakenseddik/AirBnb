@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Aventures extends StatelessWidget {
+/*class Aventures extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -26,7 +26,7 @@ class Aventures extends StatelessWidget {
       ],
     );
   }
-}
+}*/
 
 class Trip extends StatelessWidget {
   final String imgURL, title;
@@ -35,7 +35,7 @@ class Trip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10, left: 12, right: 12, bottom: 0),
-      height: 250,
+      height: 290,
       child: Column(
         children: <Widget>[
           Stack(
@@ -96,10 +96,16 @@ class Trip extends StatelessWidget {
                 ),
                 Text(
                   title,
-                  style: GoogleFonts.lato(fontSize: 16),
+                  style: GoogleFonts.lato(
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 )
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+                'Find, save, and share the perfect place to stay, all from your phone.'),
           )
         ],
       ),

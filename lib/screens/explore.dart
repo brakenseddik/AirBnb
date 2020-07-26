@@ -2,8 +2,6 @@ import 'package:airbnb/components/aventures.dart';
 import 'package:airbnb/components/cards.dart';
 import 'package:airbnb/components/header.dart';
 import 'package:airbnb/components/searchbar.dart';
-import 'package:airbnb/constants/constants.dart';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,6 +15,15 @@ class _ExploreState extends State<Explore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
+        onPressed: null,
+        child: Icon(
+          Icons.location_on,
+          color: Color(0xFFFF5A60),
+        ),
+      ),
       body: ListView(
         children: <Widget>[
           searchBar(),
@@ -30,13 +37,31 @@ class _ExploreState extends State<Explore> {
             child: Text(
               'Expériences très bien notés',
               style: GoogleFonts.signika(
-                  fontSize: 22, fontWeight: FontWeight.bold),
+                  fontSize: 22,
+                  color: Colors.black54,
+                  fontWeight: FontWeight.bold),
             ),
           ),
-          Container(
-            height: 300,
+          Trip(
+            title: '£87',
+            imgURL: 'assets/mm.jpg',
+          ),
+          Trip(
+            title: '£86',
+            imgURL: 'assets/image.jpg',
+          ),
+          Trip(
+            title: '£98',
+            imgURL: 'assets/dd.jpg',
+          ),
+          Trip(
+            title: '£111',
+            imgURL: 'assets/london.jpg',
+          ),
+          /* Container(
+             height: 300,
             child: Aventures(),
-          )
+          )*/
         ],
       ),
     );
